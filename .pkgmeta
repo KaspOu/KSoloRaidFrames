@@ -1,0 +1,8 @@
+package-as: KallyeSoloRaidFrames
+
+manual-changelog: ChangeLog.txt
+
+license-output: License.txt
+
+ignore:
+    - .vscode

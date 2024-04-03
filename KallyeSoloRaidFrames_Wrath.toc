@@ -1,0 +1,20 @@
+## Interface: 30403
+## Title: Kallye Solo RaidFrames
+## Title-frFR: Kallye Solo RaidFrames
+## Notes: Always show raid.
+## Notes-frFR: Raid toujours visible.
+## Version: 10.2.601
+## Author: Kallye of Elune
+## IconTexture: Interface\AddOns\KallyeSoloRaidFrames\Logo32
+
+## X-Category: Raid Frames, Interface Enhancements
+## X-License: MIT
+## X-Website: https://bitbucket.org/KaspOu/KallyeSoloRaidFrames/
+## X-Curse-Project-ID: 997121
+
+KallyeSoloRaidFrames.globals.lua
+localization.en.lua
+localization.fr.lua
+KallyeSoloRaidFramesAPI.lua
+KallyeSoloRaidFrames.lua
+KallyeSoloRaidFrames.xml

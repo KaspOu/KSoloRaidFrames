@@ -1,0 +1,3 @@
+v10.2.601
+- First version, extracted solo raid mode from Kallye Raid Frames
+- Retail, Classic & Wrath versions
