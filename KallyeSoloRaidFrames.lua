@@ -1,5 +1,5 @@
 --[[
-	Hello to Kallye Solo Raid Frames
+	Hello to K Solo Raid Frames
 	Last version: @project-version@ (@project-date-iso@)
 ]]
 
