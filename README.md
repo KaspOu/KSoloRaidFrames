@@ -1,4 +1,4 @@
-# Kallye Solo Raid Frames
+# K Solo Raid Frames
 
 **Always show Raid frames**
 
@@ -16,6 +16,6 @@ https://www.curseforge.com/wow/addons/kallye-raid-frames
 
 
 
-Kallye Solo Raid Frames is licensed under the GNU General Public License version 3.
+K Solo Raid Frames is licensed under the GNU General Public License version 3.
 
 https://www.curseforge.com/members/kaspou/projects

@@ -1,6 +1,6 @@
 ## Interface: 100206
-## Title: Kallye Solo RaidFrames
-## Title-frFR: Kallye Solo RaidFrames
+## Title: K Solo RaidFrames
+## Title-frFR: K Solo RaidFrames
 ## Notes: Solo show raid. Use << |cff00ff00/sr|r >> and activate raid style party frame options.
 ## Notes-frFR: Affiche le Raid en solo. Tapez << |cff00ff00/sr|r >> et activez l'option raid style party.
 ## Version: 10.2.601
