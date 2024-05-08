@@ -1,4 +1,4 @@
-## Interface: 100206
+## Interface: 100207
 ## Title: K Solo RaidFrames
 ## Title-frFR: K Solo RaidFrames
 ## Notes: Solo show raid. Use << |cff00ff00/sr|r >> and activate raid style party frame options.
