@@ -3,7 +3,7 @@
 ## Title-frFR: K Solo RaidFrames
 ## Notes: Solo show raid. Use << |cff00ff00/sr|r >> and activate raid style party frame options.
 ## Notes-frFR: Affiche le Raid en solo. Tapez << |cff00ff00/sr|r >> et activez l'option raid style party.
-## Version: 10.2.601
+## Version: 10.2.702
 ## Author: Kallye of Elune
 ## IconTexture: Interface\AddOns\KallyeSoloRaidFrames\Logo32
 
@@ -12,9 +12,8 @@
 ## X-Website: https://bitbucket.org/KaspOu/kallyesoloraidframes/
 ## X-Curse-Project-ID: 997121
 
-KallyeSoloRaidFrames.globals.lua
-localization.en.lua
-localization.fr.lua
-KallyeSoloRaidFramesAPI.lua
-KallyeSoloRaidFrames.lua
-KallyeSoloRaidFrames.xml
+Core\KallyeSoloRaidFrames.globals.lua
+Core\locales.xml
+Core\KallyeSoloRaidFramesAPI.lua
+Core\KallyeSoloRaidFrames.lua
+Core\KallyeSoloRaidFrames.xml

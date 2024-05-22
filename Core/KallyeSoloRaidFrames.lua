@@ -12,7 +12,8 @@ function KS_OnLoad(self)
 	SlashCmdList["KS"] = SLASH_KS_command;
 	SLASH_KS1 = "/ks";
 	SLASH_KS2 = "/sr";
-	SLASH_KS3 = "/kallyesolo";
+	SLASH_KS3 = "/ksr";
+	SLASH_KS4 = "/kallyesolo";
 
 	if (KS_CONFLICT) then
 		KS_AddMsgErr(format(KS_CONFLICT_MESSAGE, KS_CONFLICT_WITH));

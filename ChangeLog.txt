@@ -1,3 +1,9 @@
+v10.2.702
+- Code organized
+
+v10.2.701
+- Wow DF 10.2.7
+
 v10.2.601
 - First version, extracted solo raid mode from Kallye Raid Frames
 - Retail, Classic & Wrath versions

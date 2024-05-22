@@ -3,7 +3,7 @@
 ## Title-frFR: K Solo RaidFrames
 ## Notes: Always show raid.
 ## Notes-frFR: Raid toujours visible.
-## Version: 10.2.601
+## Version: 10.2.702
 ## Author: Kallye of Elune
 ## IconTexture: Interface\AddOns\KallyeSoloRaidFrames\Logo32
 
@@ -12,9 +12,8 @@
 ## X-Website: https://bitbucket.org/KaspOu/KallyeSoloRaidFrames/
 ## X-Curse-Project-ID: 997121
 
-KallyeSoloRaidFrames.globals.lua
-localization.en.lua
-localization.fr.lua
-KallyeSoloRaidFramesAPI.lua
-KallyeSoloRaidFrames.lua
-KallyeSoloRaidFrames.xml
+Core\KallyeSoloRaidFrames.globals.lua
+Core\locales.xml
+Core\KallyeSoloRaidFramesAPI.lua
+Core\KallyeSoloRaidFrames.lua
+Core\KallyeSoloRaidFrames.xml
