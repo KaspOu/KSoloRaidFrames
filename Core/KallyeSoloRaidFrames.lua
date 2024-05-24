@@ -3,11 +3,57 @@
 	Last version: @project-version@ (@project-date-iso@)
 ]]
 
+local _, ns = ...
+local l = ns.I18N;
 local isInit = false;
 local isLoaded = false;
 
 
-function KS_OnLoad(self)
+local function SLASH_KS_command(msgIn)
+	if (not isLoaded) then
+		ns.AddMsgWarn(l.INIT_FAILED);
+		return;
+	end
+	
+	if msgIn == "edit" then
+		ns.ShowEditMode("PartyFrame");
+	else
+		ns.CheckForSoloFrames();
+	end
+end
+
+local function SLASH_CLEAR_command()
+	SELECTED_CHAT_FRAME:Clear()
+end
+
+local function OnEvent(self, event, ...)
+	local arg1 = select(1, ...);
+	if (event == "ADDON_LOADED" and arg1 == ns.ADDON_NAME) then
+		self:UnregisterEvent("ADDON_LOADED");
+		isLoaded = true;
+		-- ! SoloRaid Frames
+			if (EditModeManagerFrame.UseRaidStylePartyFrames) then
+				-- Edit Mode - Since DragonFlight (10)
+				hooksecurefunc(CompactPartyFrame, "UpdateVisibility", ns.Hook_CompactPartyFrame_UpdateVisibility);
+			else
+				-- Classic
+				CompactRaidFrameManager:Show()
+				CompactRaidFrameManager.Hide = function() end
+				CompactRaidFrameContainer:Show()
+				CompactRaidFrameContainer.Hide = function() end
+
+				GetDisplayedAllyFrames = ns.SoloRaid_GetDisplayedAllyFrames;
+				CompactRaidFrameContainer_OnEvent = ns.SoloRaid_CompactRaidFrameContainer_OnEvent;
+			end
+
+		-- ! Addon Loaded ^^
+		if (EditModeManagerFrame.UseRaidStylePartyFrames and not EditModeManagerFrame:UseRaidStylePartyFrames()) then
+			ns.AddMsgWarn(ns.TITLE.." - "..l.OPTION_SOLORAID_TOOLTIP);
+		end
+	end
+end -- END ns.OnEvent
+
+local function OnLoad(frame)
 
 	SlashCmdList["KS"] = SLASH_KS_command;
 	SLASH_KS1 = "/ks";
@@ -15,8 +61,8 @@ function KS_OnLoad(self)
 	SLASH_KS3 = "/ksr";
 	SLASH_KS4 = "/kallyesolo";
 
-	if (KS_CONFLICT) then
-		KS_AddMsgErr(format(KS_CONFLICT_MESSAGE, KS_CONFLICT_WITH));
+	if (ns.CONFLICT) then
+		ns.AddMsgErr(format(l.CONFLICT_MESSAGE, ns.CONFLICT_WITH));
 		return;
 	end
 
@@ -26,55 +72,17 @@ function KS_OnLoad(self)
 	if (isInit or InCombatLockdown()) then return; end
 
 	isInit = true;
-	self:SetScript("OnEvent",
-		function(self, event, ...)
-			KS_OnEvent(self, event, ...);
+	frame:SetScript("OnEvent",
+		function(frame, event, ...)
+			OnEvent(frame, event, ...);
 		end
 	);
-	self:RegisterEvent("ADDON_LOADED");
-end -- END KS_OnLoad
+	frame:RegisterEvent("ADDON_LOADED");
+end -- END ns.OnLoad
 
--- KS_OnEvent
-function KS_OnEvent(self, event, ...)
-	local arg1 = select(1, ...);
-	if (event == "ADDON_LOADED" and arg1 == KS_ADDON_NAME) then
-		self:UnregisterEvent("ADDON_LOADED");
-		isLoaded = true;
-		-- ! SoloRaid Frames
-			if (EditModeManagerFrame.UseRaidStylePartyFrames) then
-				-- Edit Mode - Since DragonFlight (10)
-				_G.hooksecurefunc(CompactPartyFrame, "UpdateVisibility", KS_Hook_CompactPartyFrame_UpdateVisibility);
-			else
-				-- Classic
-				_G.CompactRaidFrameManager:Show()
-				_G.CompactRaidFrameManager.Hide = function() end
-				_G.CompactRaidFrameContainer:Show()
-				_G.CompactRaidFrameContainer.Hide = function() end
 
-				_G.GetDisplayedAllyFrames = KS_SoloRaid_GetDisplayedAllyFrames;
-				_G.CompactRaidFrameContainer_OnEvent = KS_SoloRaid_CompactRaidFrameContainer_OnEvent;
-			end
 
-		-- ! Addon Loaded ^^
-		if (EditModeManagerFrame.UseRaidStylePartyFrames and not EditModeManagerFrame:UseRaidStylePartyFrames()) then
-			KS_AddMsgWarn(KS_TITLE.." - "..KS_OPTION_SOLORAID_TOOLTIP);
-		end
-	end
-end -- END KS_OnEvent
-
-function SLASH_KS_command(msgIn)
-	if (not isLoaded) then
-		KS_AddMsgWarn(KS_INIT_FAILED);
-		return;
-	end
-	
-	if msgIn == "edit" then
-		KS_ShowEditMode("PartyFrame");
-	else
-		CheckForSoloFrames();
-	end
-end
-
-function SLASH_CLEAR_command()
-	SELECTED_CHAT_FRAME:Clear()
+do
+	local eventsFrame = CreateFrame("Frame", nil, UIParent)
+	OnLoad(eventsFrame);
 end

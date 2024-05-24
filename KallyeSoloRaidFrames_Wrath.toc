@@ -16,4 +16,3 @@ Core\KallyeSoloRaidFrames.globals.lua
 Core\locales.xml
 Core\KallyeSoloRaidFramesAPI.lua
 Core\KallyeSoloRaidFrames.lua
-Core\KallyeSoloRaidFrames.xml

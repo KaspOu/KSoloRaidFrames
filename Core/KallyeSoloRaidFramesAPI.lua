@@ -1,4 +1,11 @@
-function KS_ShowEditMode(window)
+local _, ns = ...
+local l = ns.I18N;
+
+if ns.CONFLICT then
+	return
+end
+
+function ns.ShowEditMode(window)
 	if (not EditModeManagerFrame.UseRaidStylePartyFrames) then
 		return;
 	end
@@ -15,7 +22,7 @@ end
 ! Solo Raid Frames main, since DragonFlight (10)
 - Show Raid Frames if solo
 ]]
-function KS_Hook_CompactPartyFrame_UpdateVisibility()
+function ns.Hook_CompactPartyFrame_UpdateVisibility()
 	if (not IsInRaid() and not IsInGroup()) then
 		CompactPartyFrame:SetShown(true);
 	end
@@ -25,10 +32,11 @@ end
 ! Solo Raid Frames Classic
 - Show Party/Raid Frames even if solo
 ]]
-local KS_Blizzard_GetDisplayedAllyFrames = GetDisplayedAllyFrames; -- protect original behavior
-function KS_SoloRaid_GetDisplayedAllyFrames()
+local Blizzard_GetDisplayedAllyFrames = GetDisplayedAllyFrames; -- protect original behavior
+
+function ns.SoloRaid_GetDisplayedAllyFrames()
 	-- Call original default behavior
-	local daf = KS_Blizzard_GetDisplayedAllyFrames()
+	local daf = Blizzard_GetDisplayedAllyFrames()
 
 	if not daf then
 		return 'party'
@@ -36,10 +44,12 @@ function KS_SoloRaid_GetDisplayedAllyFrames()
 		return daf
 	end
 end
-local KS_Blizzard_CompactRaidFrameContainer_OnEvent = CompactRaidFrameContainer_OnEvent;  -- protect original behavior
-function KS_SoloRaid_CompactRaidFrameContainer_OnEvent(self, event, ...)
+
+local Blizzard_CompactRaidFrameContainer_OnEvent = CompactRaidFrameContainer_OnEvent;  -- protect original behavior
+
+function ns.SoloRaid_CompactRaidFrameContainer_OnEvent(self, event, ...)
 	-- Call original default behavior
-	KS_Blizzard_CompactRaidFrameContainer_OnEvent(self, event, ...)
+	Blizzard_CompactRaidFrameContainer_OnEvent(self, event, ...)
 
 	-- If all these are true, then the above call already did the TryUpdate
 	local unit = ... or ""
@@ -52,37 +62,11 @@ function KS_SoloRaid_CompactRaidFrameContainer_OnEvent(self, event, ...)
 	end
 end
 
-function CheckForSoloFrames()
+function ns.CheckForSoloFrames()
 	if (EditModeManagerFrame.UseRaidStylePartyFrames and not EditModeManagerFrame:UseRaidStylePartyFrames()) then
-		KS_AddMsgWarn(KS_TITLE.." - "..KS_OPTION_SOLORAID_TOOLTIP);
-		KS_ShowEditMode("PartyFrame");
+		ns.AddMsgWarn(ns.TITLE.." - "..l.OPTION_SOLORAID_TOOLTIP);
+		ns.ShowEditMode("PartyFrame");
 	else
-		KS_AddMsg(KS_MSG_LOADED);
-	end
-end
-
---[[
-!  Default chat
-]]
-function KS_AddMsg(msg)
-	if (DEFAULT_CHAT_FRAME) then
-		DEFAULT_CHAT_FRAME:AddMessage(format("%s%s|r", YLL, msg or ""));
-	end
-end
---[[
-!  Warning chat
-]]
-function KS_AddMsgWarn(msg)
-	if (DEFAULT_CHAT_FRAME) then
-		DEFAULT_CHAT_FRAME:AddMessage(format("%s%s|r", CY, msg or ""));
-	end
-end
-
---[[
-!  Error chat
-]]
-function KS_AddMsgErr(msg)
-	if (DEFAULT_CHAT_FRAME) then
-		DEFAULT_CHAT_FRAME:AddMessage(format("%s%s: %s|r", RDL, KS_TITLE, msg or ""));
+		ns.AddMsg(l.MSG_LOADED);
 	end
 end

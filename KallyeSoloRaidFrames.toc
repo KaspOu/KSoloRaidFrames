@@ -1,4 +1,8 @@
-## Interface: 100207
+## Interface: 100207, 100208
+## Interface-Cata: 40400
+## Interface-Wrath: 30403
+## Interface-TBC: 20504
+## Interface-Classic: 11502
 ## Title: K Solo RaidFrames
 ## Title-frFR: K Solo RaidFrames
 ## Notes: Solo show raid. Use << |cff00ff00/sr|r >> and activate raid style party frame options.
@@ -16,4 +20,3 @@ Core\KallyeSoloRaidFrames.globals.lua
 Core\locales.xml
 Core\KallyeSoloRaidFramesAPI.lua
 Core\KallyeSoloRaidFrames.lua
-Core\KallyeSoloRaidFrames.xml
