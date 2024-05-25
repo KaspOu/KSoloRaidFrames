@@ -3,6 +3,7 @@ ns.VERSION       = C_AddOns.GetAddOnMetadata(addonName, "Version");
 ns.VERSIONNR     = tonumber(gsub(ns.VERSION, "%D", ""), 10);
 local GetAddOnInfo = C_AddOns.GetAddOnInfo or GetAddOnInfo;
 ns.ADDON_NAME,ns.TITLE, ns.NOTES = GetAddOnInfo(addonName);
+ns.MODULES = {};
 
 -- Kallye Raid Frames always loaded before
 if (KRF_TITLE) then
@@ -46,7 +47,7 @@ function ns.AddMsgErr(msg)
 	end
 end
 
-KS_TITLE = ns.TITLE; -- only global variable, for conflict detection
+KS_TITLE = ns.TITLE; -- global variable, for conflict detection
 
 --@do-not-package@
 -- DEBUG Purposes

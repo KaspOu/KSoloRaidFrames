@@ -1,3 +1,6 @@
+v10.2.703
+- Code modulable (duplicated from Kallye Raid Frames)
+
 v10.2.702
 - Code organized
 
