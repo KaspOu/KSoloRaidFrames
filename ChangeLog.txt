@@ -1,3 +1,6 @@
+v10.2.704
+- Shared code updated
+
 v10.2.703
 - Code modulable (duplicated from Kallye Raid Frames)
 
