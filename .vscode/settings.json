@@ -26,7 +26,11 @@
         "SELECTED_CHAT_FRAME",
         "SlashCmdList",
         "WOW_PROJECT_ID",
-        "WOW_PROJECT_MAINLINE"
+        "WOW_PROJECT_MAINLINE",
+        "EditModeSettingDisplayInfoManager",
+        "EditModePresetLayoutManager",
+        "AddonList",
+        "DropDownList1"
     ],
     "cSpell.words": [
         "prepatch"

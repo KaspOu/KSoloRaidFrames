@@ -1,3 +1,6 @@
+v10.2.705
+- Blizzard UseRaidStylePartyFrames autoset to true, no more manual action required
+
 v10.2.704
 - Shared code updated
 
