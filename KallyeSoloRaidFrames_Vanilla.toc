@@ -1,4 +1,4 @@
-## Interface: 11502
+## Interface: 11503
 ## Title: |cff00ff00K|r Solo RaidFrames
 ## Title-frFR: |cff00ff00K|r Solo RaidFrames
 ## Notes: Always show raid.
