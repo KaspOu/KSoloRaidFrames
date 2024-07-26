@@ -1,4 +1,5 @@
-## Interface: 100207, 100208
+## Interface: 110000
+## Interface-Dragon: 100208
 ## Interface-Cata: 40400
 ## Interface-Wrath: 30403
 ## Interface-TBC: 20504
@@ -7,7 +8,7 @@
 ## Title-frFR: |cff00ff00K|r Solo RaidFrames
 ## Notes: Solo show raid. Use << |cff00ff00/sr|r >> and activate raid style party frame options.
 ## Notes-frFR: Affiche le Raid en solo. Tapez << |cff00ff00/sr|r >> et activez l'option raid style party.
-## Version: 10.2.704
+## Version: 11.0.001
 ## Author: Kallye of Elune
 ## IconTexture: Interface\AddOns\KallyeSoloRaidFrames\Logo32
 

@@ -3,7 +3,7 @@
 ## Title-frFR: |cff00ff00K|r Solo RaidFrames
 ## Notes: Always show raid.
 ## Notes-frFR: Raid toujours visible.
-## Version: 10.2.704
+## Version: 11.0.001
 ## Author: Kallye of Elune
 ## IconTexture: Interface\AddOns\KallyeSoloRaidFrames\Logo32
 
