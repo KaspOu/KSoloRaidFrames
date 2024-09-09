@@ -15,7 +15,7 @@ local function SLASH_KS_command(msgIn)
 		return;
 	end
 	
-	if msgIn == "edit" then
+	if msgIn == "edit" and ns.ShowEditMode then
 		ns.ShowEditMode("PartyFrame");
 	else
 		ns.MODULES[1]:GetInfo();

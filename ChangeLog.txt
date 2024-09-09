@@ -1,3 +1,6 @@
+v11.0.202
+- Blizzard UseRaidStylePartyFrames autoset to true, no more manual action required
+
 v11.0.201
 - The War Within
 
