@@ -1,9 +1,9 @@
-## Interface: 11503
+## Interface: 11504
 ## Title: |cff00ff00K|r Solo RaidFrames
 ## Title-frFR: |cff00ff00K|r Solo RaidFrames
 ## Notes: Always show raid.
 ## Notes-frFR: Raid toujours visible.
-## Version: 11.0.202
+## Version: 11.0.203
 ## Author: Kallye of Elune
 ## IconTexture: Interface\AddOns\KallyeSoloRaidFrames\Logo32
 
