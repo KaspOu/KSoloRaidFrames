@@ -1,3 +1,9 @@
+v11.0.701
+- TWW 11.0.7
+
+v11.0.501
+- TWW 11.0.5
+
 v11.0.202
 - Blizzard UseRaidStylePartyFrames autoset to true, no more manual action required
 
