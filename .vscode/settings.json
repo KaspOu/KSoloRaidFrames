@@ -2,25 +2,15 @@
     "Lua.runtime.version": "Lua 5.1",
     "Lua.diagnostics.globals": [
         "BackdropTemplateMixin",
-        "C_AddOns",
-        "C_EditMode",
-        "C_Timer",
-        "ceil",
         "CompactPartyFrame",
         "CompactRaidFrameContainer_TryUpdate",
         "CompactRaidFrameContainer",
         "CompactRaidFrameManager",
         "DEFAULT_CHAT_FRAME",
         "EditModeManagerFrame",
-        "Enum",
-        "format",
-        "GetLocale",
-        "gsub",
         "HUD_EDIT_MODE_MENU",
         "HUD_EDIT_MODE_PARTY_FRAMES_LABEL",
         "HUD_EDIT_MODE_SETTING_UNIT_FRAME_RAID_STYLE_PARTY_FRAMES",
-        "InCombatLockdown",
-        "IsInRaid",
         "KRF_TITLE",
         "PartyFrame",
         "SELECTED_CHAT_FRAME",
@@ -30,7 +20,14 @@
         "EditModeSettingDisplayInfoManager",
         "EditModePresetLayoutManager",
         "AddonList",
-        "DropDownList1"
+        "DropDownList1",
+        "tAppendAll",
+        "ShowUIPanel",
+        "HideUIPanel",
+        "UIParent",
+        "CopyTable",
+        "SetCVar",
+        "GetCVarBool"
     ],
     "cSpell.words": [
         "prepatch"
@@ -58,5 +55,19 @@
         "titleBar.activeForeground": "#e7e7e7",
         "titleBar.inactiveBackground": "#ee505099",
         "titleBar.inactiveForeground": "#e7e7e799"
-    }
+    },
+    "Lua.runtime.builtin": {
+        "basic": "disable",
+        "debug": "disable",
+        "io": "disable",
+        "math": "disable",
+        "os": "disable",
+        "package": "disable",
+        "string": "disable",
+        "table": "disable",
+        "utf8": "disable"
+    },
+    "Lua.workspace.library": [
+        "c:\\Users\\kaspo\\.cursor\\extensions\\ketho.wow-api-0.18.2\\Annotations"
+    ]
 }
