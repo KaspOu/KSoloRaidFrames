@@ -17,8 +17,10 @@ local l = ns.I18N;
 local function BCC(r, g, b) return string.format("|cff%02x%02x%02x", (r*255), (g*255), (b*255)); end
 
 l.RDL = BCC(1.0, 0.3, 0.3);
+l.YLD = BCC(0.7, 0.7, 0.0);
 l.YLL = BCC(1.0, 1.0, 0.5);
 l.CY  = BCC(0.5, 1.0, 1.0);
+l.DEFAULT = l.YLD
 
 
 --[[
