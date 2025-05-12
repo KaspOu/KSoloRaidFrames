@@ -11,6 +11,12 @@ if (KRF_TITLE) then
 end
 
 
+--@do-not-package@
+-- Development icons
+ns.TITLE = format("%s|TInterface/PVPFrame/Icons/prestige-icon-8-3:16|t", ns.TITLE)
+--@end-do-not-package@
+
+
 -- Prepare I18N, with chat colors
 ns.I18N = {};
 local l = ns.I18N;
