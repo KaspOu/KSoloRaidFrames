@@ -1,4 +1,4 @@
-## Interface: 110100, 110105, 40402, 11506, 11507
+## Interface: 110100, 110105, 40402, 50500, 11506, 11507
 ## Title: |cff00ff00K|r Solo RaidFrames
 ## Title-frFR: |cff00ff00K|r Solo RaidFrames
 ## Notes: Solo show raid. Use << |cff00ff00/sr|r >> and activate raid style party frame options.
