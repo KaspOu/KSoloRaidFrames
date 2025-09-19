@@ -1,9 +1,9 @@
-## Interface: 110200, 50500, 11507
+## Interface: 110200, 110205, 50500, 50501, 11507
 ## Title: |cff00ff00K|r Solo RaidFrames
 ## Title-frFR: |cff00ff00K|r Solo RaidFrames
 ## Notes: Solo show raid. Use << |cff00ff00/sr|r >> and activate raid style party frame options.
 ## Notes-frFR: Affiche le Raid en solo. Tapez << |cff00ff00/sr|r >> et activez l'option raid style party.
-## Version: 11.2.001
+## Version: 11.2.002
 ## Author: Kallye of Elune
 ## IconTexture: Interface\AddOns\KallyeSoloRaidFrames\Logo32
 
