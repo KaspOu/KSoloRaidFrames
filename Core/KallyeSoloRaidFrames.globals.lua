@@ -3,7 +3,7 @@ ns.VERSION       = C_AddOns.GetAddOnMetadata(addonName, "Version");
 ns.VERSIONNR     = tonumber(gsub(ns.VERSION, "%D", ""), 10);
 local GetAddOnInfo = C_AddOns.GetAddOnInfo or GetAddOnInfo;
 ns.ADDON_NAME,ns.TITLE, ns.NOTES = GetAddOnInfo(addonName);
-ns.OPTION_NAME = nil; --"KallyeSoloRaidFramesOptions";
+ns.OPTIONS_NAME = nil; --"KallyeSoloRaidFramesOptions";
 
 -- Kallye Raid Frames always loaded before
 if (KRF_TITLE) then
