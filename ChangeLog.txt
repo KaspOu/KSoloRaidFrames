@@ -1,3 +1,6 @@
+v11.2.501
+- Added DE / IT / KO / ZH locales
+
 v11.2.002
 - Added ES locale
 

@@ -3,12 +3,21 @@
 ## Title-frFR: |cff00ff00K|r Solo RaidFrames
 ## Notes: Solo show raid. Use << |cff00ff00/sr|r >> and activate raid style party frame options.
 ## Notes-frFR: Affiche le Raid en solo. Tapez << |cff00ff00/sr|r >> et activez l'option raid style party.
-## Version: 11.2.002
+## Notes-ruRU: Показывает рейд в одиночку. Используйте << |cff00ff00/sr|r >> и активируйте опции фреймов группы в стиле рейда.
+## Notes-deDE: Zeigt den Schlachtzug im Solo-Modus an. Verwenden Sie << |cff00ff00/sr|r >> und aktivieren Sie die Optionen für Schlachtzugs-Gruppenfenster.
+## Notes-esES: Muestra la banda en solitario. Usa << |cff00ff00/sr|r >> y activa las opciones de marcos de grupo estilo banda.
+## Notes-esMX: Muestra la banda en solitario. Usa << |cff00ff00/sr|r >> y activa las opciones de marcos de grupo estilo banda.
+## Notes-itIT: Mostra il raid in solitario. Usa << |cff00ff00/sr|r >> e attiva le opzioni dei riquadri del gruppo in stile raid.
+## Notes-koKR: 솔로 레이드를 표시합니다. << |cff00ff00/sr|r >>를 사용하고 레이드 스타일 파티 프레임 옵션을 활성화하십시오.
+## Notes-zhCN: 单独显示团队。使用 << |cff00ff00/sr|r >> 并激活团队风格小队框架选项。
+## Notes-zhTW: 單獨顯示團隊。使用 << |cff00ff00/sr|r >> 並啟用團隊風格隊伍框架選項。
+
+## Version: 11.2.501
 ## Author: Kallye of Elune
 ## IconTexture: Interface\AddOns\KallyeSoloRaidFrames\Logo32
 
 ## X-Category: Raid Frames, Interface Enhancements
-## X-Localizations: enUS, frFR, ruRU, esES
+## X-Localizations: enUS, frFR, ruRU, deDE, esES, esMX, itIT, koKR, zhCN, zhTW
 ## X-License: MIT
 ## X-Website: https://github.com/KaspOu/KSoloRaidFrames/
 ## X-Curse-Project-ID: 997121

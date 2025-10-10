@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 -- Russian localization ZamestoTV
 -------------------------------------------------------------------------------
-if (GetLocale() == "ruRU") then
+if (GetLocale() ~= "ruRU") then return end
 local _, ns = ...
 local l = ns.I18N;
 
@@ -19,5 +19,4 @@ l.INIT_FAILED = format("%s не инициализирован корректн�
 if (EditModeManagerFrame.UseRaidStylePartyFrames) then
   l.OPTION_RAIDSTYLE_ACTION = "Вручную активируйте опцию "..l.YLL..HUD_EDIT_MODE_SETTING_UNIT_FRAME_RAID_STYLE_PARTY_FRAMES.."|r ("..HUD_EDIT_MODE_MENU.." : "..HUD_EDIT_MODE_PARTY_FRAMES_LABEL..")";
   l.OPTION_RAIDSTYLE_WARNING = "Автоматическая активация опции "..l.YLL..HUD_EDIT_MODE_SETTING_UNIT_FRAME_RAID_STYLE_PARTY_FRAMES.."|r ("..HUD_EDIT_MODE_MENU..": "..HUD_EDIT_MODE_PARTY_FRAMES_LABEL..")";
-end
 end
