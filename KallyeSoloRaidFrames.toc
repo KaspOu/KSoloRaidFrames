@@ -1,4 +1,4 @@
-## Interface: 120000, 110200, 110205, 50500, 50501, 11507
+## Interface: 120000, 110205, 50501, 11508
 ## Title: |cff00ff00K|r Solo RaidFrames
 ## Title-frFR: |cff00ff00K|r Solo RaidFrames
 ## Notes: Solo show raid. Use << |cff00ff00/sr|r >> and activate raid style party frame options.
@@ -13,7 +13,7 @@
 ## Notes-zhCN: 单独显示团队。使用 << |cff00ff00/sr|r >> 并激活团队风格小队框架选项。
 ## Notes-zhTW: 單獨顯示團隊。使用 << |cff00ff00/sr|r >> 並啟用團隊風格隊伍框架選項。
 
-## Version: 11.2.502
+## Version: 11.2.503
 ## Author: Kallye of Elune
 ## IconTexture: Interface\AddOns\KallyeSoloRaidFrames\Logo32
 
@@ -24,7 +24,15 @@
 ## X-Curse-Project-ID: 997121
 
 Core\KallyeSoloRaidFrames.globals.lua
-Core\locales.xml
+Core\localization.en.lua
+Core\localization.fr.lua [AllowLoadTextLocale frFR]
+Core\localization.de.lua [AllowLoadTextLocale deDE]
+Core\localization.es.lua [AllowLoadTextLocale esES, esMX]
+Core\localization.it.lua [AllowLoadTextLocale itIT]
+Core\localization.ko.lua [AllowLoadTextLocale koKR]
+Core\localization.pt.lua [AllowLoadTextLocale ptBR]
+Core\localization.ru.lua [AllowLoadTextLocale ruRU]
+Core\localization.zh.lua [AllowLoadTextLocale zhCN, zhTW]
 Libs\LibEditModeOverride-1.0\LibStub\LibStub.lua
 Libs\LibEditModeOverride-1.0\LibEditModeOverride.lua
 Modules\modules.xml
