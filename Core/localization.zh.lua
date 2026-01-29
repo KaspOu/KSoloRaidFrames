@@ -19,4 +19,6 @@ l.INIT_FAILED = format("%s 未正确加载（冲突？）！", l.VERS_TITLE);
 if (EditModeManagerFrame.UseRaidStylePartyFrames) then
     l.OPTION_RAIDSTYLE_ACTION = "手动启用选项 "..l.YLL..HUD_EDIT_MODE_SETTING_UNIT_FRAME_RAID_STYLE_PARTY_FRAMES.."|r ("..HUD_EDIT_MODE_MENU.." : "..HUD_EDIT_MODE_PARTY_FRAMES_LABEL..")";
     l.OPTION_RAIDSTYLE_WARNING = "自动启用选项 "..l.YLL..HUD_EDIT_MODE_SETTING_UNIT_FRAME_RAID_STYLE_PARTY_FRAMES.."|r ("..HUD_EDIT_MODE_MENU.." : "..HUD_EDIT_MODE_PARTY_FRAMES_LABEL..")";
+    l.OPTION_SOLORAID_GROUPINRAID_TOOLTIP = "团队中同时显示小队和团队框体：%s"
+    l.MSG_LOADED = l.MSG_LOADED.."\n"..l.CY..format("输入%s以在团队中切换小队框体", l.YLL.."/sr group|r")
 end

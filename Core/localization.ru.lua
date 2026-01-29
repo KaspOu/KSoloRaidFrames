@@ -19,4 +19,6 @@ l.INIT_FAILED = format("%s не инициализирован корректн�
 if (EditModeManagerFrame.UseRaidStylePartyFrames) then
   l.OPTION_RAIDSTYLE_ACTION = "Вручную активируйте опцию "..l.YLL..HUD_EDIT_MODE_SETTING_UNIT_FRAME_RAID_STYLE_PARTY_FRAMES.."|r ("..HUD_EDIT_MODE_MENU.." : "..HUD_EDIT_MODE_PARTY_FRAMES_LABEL..")";
   l.OPTION_RAIDSTYLE_WARNING = "Автоматическая активация опции "..l.YLL..HUD_EDIT_MODE_SETTING_UNIT_FRAME_RAID_STYLE_PARTY_FRAMES.."|r ("..HUD_EDIT_MODE_MENU..": "..HUD_EDIT_MODE_PARTY_FRAMES_LABEL..")";
+  l.OPTION_SOLORAID_GROUPINRAID_TOOLTIP = "Отображать и групповые, и рейдовые рамки (во время рейда): %s"
+  l.MSG_LOADED = l.MSG_LOADED.."\n"..l.CY..format("Введите %s для переключения групповых рамок в рейде", l.YLL.."/sr group|r")
 end

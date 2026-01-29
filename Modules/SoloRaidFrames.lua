@@ -4,7 +4,7 @@ local l = ns.I18N;
 -- * avoid conflict override
 if ns.CONFLICT then return; end
 
-local Hook_CompactPartyFrame_UpdateVisibility = function() end;
+local Hook_CompactRaidFrameManager_UpdateContainerVisibility = function() end;
 local SoloRaid_GetDisplayedAllyFrames = function() end;
 local SoloRaid_CompactRaidFrameContainer_OnEvent = function() end;
 
@@ -12,11 +12,15 @@ if (EditModeManagerFrame.UseRaidStylePartyFrames) then
     --[[
     ! Solo Raid Frames main, since DragonFlight (10)
     - Show Raid Frames if solo
+    - Show Group Frames while raid if SoloRaidFrameGroupInRaid
     ]]
-    Hook_CompactPartyFrame_UpdateVisibility = function()
-        if (not IsInGroup() and not IsInRaid()) then
+    Hook_CompactRaidFrameManager_UpdateContainerVisibility = function()
+        local cacheOptions = ns.Module.cacheOptions
+        local showSolo = cacheOptions.SoloRaidFrame and not IsInRaid()
+        local showRaid = cacheOptions.SoloRaidFrameGroupInRaid and IsInRaid()
+        if (showSolo or showRaid) then
             if InCombatLockdown() then
-                C_Timer.After(1, Hook_CompactPartyFrame_UpdateVisibility);
+                C_Timer.After(1, Hook_CompactRaidFrameManager_UpdateContainerVisibility);
                 return
             end
             CompactPartyFrame:SetShown(true);
@@ -151,10 +155,10 @@ local function onSaveOptions(self, options)
     end
 end
 local function onInit(self, options)
-    if (options.SoloRaidFrame) then
+    if (options.SoloRaidFrame or options.SoloRaidFrameGroupInRaid) then
         if (EditModeManagerFrame.UseRaidStylePartyFrames) then
             --? Edit Mode - Since DragonFlight (10)
-            hooksecurefunc(CompactPartyFrame, "UpdateVisibility", Hook_CompactPartyFrame_UpdateVisibility);
+            hooksecurefunc("CompactRaidFrameManager_UpdateContainerVisibility", Hook_CompactRaidFrameManager_UpdateContainerVisibility);
         else
             --? Classic
             CompactRaidFrameManager:Show()
