@@ -19,4 +19,6 @@ l.INIT_FAILED = format("%s non inizializzato correttamente (conflitto ?) !", l.V
 if (EditModeManagerFrame.UseRaidStylePartyFrames) then
     l.OPTION_RAIDSTYLE_ACTION = "Attiva manualmente l'opzione "..l.YLL..HUD_EDIT_MODE_SETTING_UNIT_FRAME_RAID_STYLE_PARTY_FRAMES.."|r ("..HUD_EDIT_MODE_MENU.." : "..HUD_EDIT_MODE_PARTY_FRAMES_LABEL..")";
     l.OPTION_RAIDSTYLE_WARNING = "Attivazione automatica dell'opzione "..l.YLL..HUD_EDIT_MODE_SETTING_UNIT_FRAME_RAID_STYLE_PARTY_FRAMES.."|r ("..HUD_EDIT_MODE_MENU.." : "..HUD_EDIT_MODE_PARTY_FRAMES_LABEL..")";
+    l.OPTION_SOLORAID_GROUPINRAID_TOOLTIP = "Mostra sia i riquadri del gruppo che del raid (quando sei in raid): %s"
+    l.MSG_LOADED = l.MSG_LOADED.."\n"..l.CY..format("Digita %s per alternare i riquadri del gruppo durante un raid", l.YLL.."/sr group|r")
 end

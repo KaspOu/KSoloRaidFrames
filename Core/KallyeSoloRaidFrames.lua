@@ -8,14 +8,24 @@ local l = ns.I18N;
 local isInit = false;
 local isLoaded = false;
 
+if KSoloRaidFramesOptions == nil then
+	KSoloRaidFramesOptions = {
+		SoloRaidFrameGroupInRaid = false
+	}
+end
 
 local function SLASH_KS_command(msgIn)
 	if (not isLoaded) then
 		ns.AddMsgWarn(l.INIT_FAILED);
 		return;
 	end
-	
-	if msgIn == "edit" and ns.ShowEditMode then
+
+	if msgIn == "group" and ns.ShowEditMode then
+		KSoloRaidFramesOptions.SoloRaidFrameGroupInRaid = not KSoloRaidFramesOptions.SoloRaidFrameGroupInRaid
+		ns.AddMsgWarn(format(l.OPTION_SOLORAID_GROUPINRAID_TOOLTIP,
+			(KSoloRaidFramesOptions.SoloRaidFrameGroupInRaid and l.GR..SLASH_TEXTTOSPEECH_ENABLED or l.RD..SLASH_TEXTTOSPEECH_DISABLED )
+			))
+	elseif msgIn == "edit" and ns.ShowEditMode then
 		ns.ShowEditMode("PartyFrame");
 	else
 		ns.MODULES[1]:GetInfo();
@@ -31,7 +41,7 @@ local function OnEvent(self, event, ...)
 	if (event == "ADDON_LOADED" and arg1 == ns.ADDON_NAME) then
 		self:UnregisterEvent("ADDON_LOADED");
 		isLoaded = true;
-		
+
 		-- Load Module (standalone addon)
 		local options = { SoloRaidFrame = true };
 		ns.MODULES[1]:Init(options);
