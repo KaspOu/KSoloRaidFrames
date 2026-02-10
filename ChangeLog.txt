@@ -1,3 +1,22 @@
+v12.0.101
+- Midnight 12.0.1
+
+v12.0.004
+- Toc update
+
+v12.0.003
+- New option (retail): Show both party and raid frames (while in raid)
+
+v12.0.001
+- Midnight prepatch fixes
+
+v11.2.702
+- Classic Anniversary
+
+v11.2.701
+- TWW 11.2.7
+- Wotlk China
+
 v11.2.503
 - Classic 1.15.8
 

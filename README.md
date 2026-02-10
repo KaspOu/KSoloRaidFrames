@@ -8,6 +8,7 @@ I suggest you to use Raid-Style Party Frames
 Commands:
 **/sr** will show status of solo raid frames
 **/sr edit** to access edit mode and party frames options
+**/sr group** to toggle party frames while in raid
 
 
 
