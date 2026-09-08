@@ -22,3 +22,6 @@ ignore:
     - *\Libs\*\.pkgmeta
     - .vscode
     - .release*
+    - .git*
+    - .icon*
+    - .logo*
