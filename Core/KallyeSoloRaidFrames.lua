@@ -32,10 +32,6 @@ local function SLASH_KS_command(msgIn)
 	end
 end
 
-local function SLASH_CLEAR_command()
-	SELECTED_CHAT_FRAME:Clear()
-end
-
 local function OnEvent(self, event, ...)
 	local arg1 = select(1, ...);
 	if (event == "ADDON_LOADED" and arg1 == ns.ADDON_NAME) then
@@ -61,9 +57,6 @@ local function InitAddon(frame)
 		return;
 	end
 
-	SlashCmdList["CLEAR"] = SLASH_CLEAR_command;
-	SLASH_CLEAR1 = "/clear";
-
 	if (isInit or InCombatLockdown()) then return; end
 
 	isInit = true;
@@ -74,8 +67,6 @@ local function InitAddon(frame)
 	);
 	frame:RegisterEvent("ADDON_LOADED");
 end
-
-
 
 do
 	local eventsFrame = CreateFrame("Frame", nil, UIParent)
