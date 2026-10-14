@@ -27,7 +27,37 @@
         "UIParent",
         "CopyTable",
         "SetCVar",
-        "GetCVarBool"
+        "GetCVarBool",
+        "format",
+        "string",
+        "C_AddOns",
+        "gsub",
+        "tonumber",
+        "SLASH_TEXTTOSPEECH_DISABLED",
+        "SLASH_TEXTTOSPEECH_ENABLED",
+        "CreateFrame",
+        "InCombatLockdown",
+        "select",
+        "ipairs",
+        "type",
+        "pairs",
+        "LibStub",
+        "assert",
+        "C_EditMode",
+        "math",
+        "Enum",
+        "error",
+        "issecurevariable",
+        "table",
+        "_G",
+        "strmatch",
+        "tostring",
+        "setmetatable",
+        "IsInGroup",
+        "IsInRaid",
+        "C_Timer",
+        "strsub",
+        "hooksecurefunc"
     ],
     "cSpell.words": [
         "prepatch"
@@ -68,6 +98,6 @@
         "utf8": "disable"
     },
     "Lua.workspace.library": [
-        "c:\\Users\\Utilisateur\\.cursor\\extensions\\ketho.wow-api-0.20.6\\Annotations\\Core"
+        "c:\\Users\\Utilisateur\\.cursor\\extensions\\ketho.wow-api-0.20.7\\Annotations\\Core"
     ]
 }
